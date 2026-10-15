@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Savory Haven Restaurant — fresh food, warm hospitality, and memorable moments.">
+  <title>Savory Haven Restaurant | Official Website</title>
+  <style>
+    :root{--green:#183f32;--green2:#245844;--cream:#fff9ef;--gold:#d9a441;--ink:#222820;--muted:#667067;--white:#fff;--shadow:0 12px 32px #10291d18}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}button,input,textarea{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}
+    .hidden{display:none!important}.topbar{position:sticky;top:0;z-index:20;background:#183f32f5;color:white;backdrop-filter:blur(12px);box-shadow:0 3px 16px #0002}.nav-wrap{max-width:1180px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:20px;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.12rem;letter-spacing:.2px;white-space:nowrap}.brand-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--gold);color:var(--green);font-size:1.35rem}.nav-links{display:flex;align-items:center;gap:5px}.nav-links a,.nav-links button{border:0;background:transparent;color:white;padding:10px 11px;border-radius:9px;cursor:pointer;font-weight:700;font-size:.92rem}.nav-links a:hover,.nav-links a.active,.nav-links button:hover{background:#ffffff1b}.menu-toggle{display:none;background:transparent;color:white;border:1px solid #ffffff55;border-radius:8px;padding:8px 11px;font-size:1.2rem}
+    .container{width:min(1120px,calc(100% - 36px));margin:auto}.section{padding:74px 0}.eyebrow{text-transform:uppercase;letter-spacing:2.5px;color:var(--gold);font-weight:800;font-size:.78rem}.section-title{font-size:clamp(2rem,4vw,3rem);line-height:1.1;color:var(--green);margin:9px 0 14px}.section-intro{max-width:660px;color:var(--muted);margin:0 0 32px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:10px;padding:12px 19px;font-weight:800;cursor:pointer;transition:transform .15s,background .15s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--gold);color:#18291f}.btn-dark{background:var(--green);color:white}.btn-outline{background:transparent;border:1px solid #ffffffa8;color:white}.btn-small{padding:8px 12px;font-size:.9rem}
+    .hero{min-height:600px;display:grid;align-items:center;color:white;background:linear-gradient(90deg,#102b21ed 0%,#102b21b8 48%,#102b2130 100%),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1900&q=85') center/cover no-repeat}.hero-content{max-width:1120px;width:calc(100% - 36px);margin:auto;padding:90px 0}.hero h1{font-size:clamp(2.7rem,7vw,5.3rem);line-height:1.02;max-width:720px;margin:15px 0 20px}.hero p{font-size:1.12rem;color:#f2f4ef;max-width:550px;margin:0 0 27px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.hero-note{display:flex;gap:18px;flex-wrap:wrap;margin-top:36px;color:#f7ead1;font-size:.92rem}.hero-note span{display:flex;align-items:center;gap:7px}
+    .feature-strip{background:#f0e8d8}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:25px 0}.feature{display:flex;gap:13px;align-items:center}.feature-icon{width:48px;height:48px;border-radius:14px;background:white;display:grid;place-items:center;font-size:1.45rem;box-shadow:var(--shadow)}.feature strong{display:block;color:var(--green)}.feature small{color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}.about-image{min-height:430px;border-radius:22px;background:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1100&q=85') center/cover;box-shadow:var(--shadow);position:relative}.image-tag{position:absolute;bottom:20px;left:20px;background:var(--gold);padding:13px 18px;border-radius:12px;font-weight:800;color:var(--green)}.about-copy p{color:var(--muted)}.check-list{list-style:none;padding:0;margin:23px 0;display:grid;gap:11px}.check-list li:before{content:"✓";display:inline-grid;place-items:center;background:#e3eddf;color:var(--green);font-weight:900;border-radius:50%;width:24px;height:24px;margin-right:10px}
+    .menu-section{background:#f5efe4}.menu-head{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}.filter-btn{border:1px solid #d7d4c9;background:white;color:var(--green);padding:9px 14px;border-radius:30px;font-weight:700;cursor:pointer}.filter-btn.active,.filter-btn:hover{background:var(--green);color:white;border-color:var(--green)}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.product-card{background:white;border-radius:17px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}.product-card img{width:100%;height:210px;object-fit:cover;background:#e9e3d7}.product-info{padding:18px;display:flex;flex-direction:column;flex:1}.product-top{display:flex;align-items:start;justify-content:space-between;gap:10px}.product-info h3{margin:0;color:var(--green);font-size:1.13rem}.price{color:#986b12;font-weight:900;white-space:nowrap}.product-info p{font-size:.92rem;color:var(--muted);margin:9px 0 17px}.product-actions{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px}.tag{font-size:.75rem;background:#f3ead6;color:#7c5b18;padding:5px 9px;border-radius:20px;font-weight:800}
+    .films-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}.film-card{border-radius:18px;overflow:hidden;background:var(--green);color:white;box-shadow:var(--shadow)}.film-preview{min-height:250px;display:grid;place-items:center;background:linear-gradient(#10291d55,#10291dbb),url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1100&q=85') center/cover}.play-button{display:grid;place-items:center;border:2px solid white;color:white;background:#ffffff28;width:70px;height:70px;border-radius:50%;font-size:1.6rem;cursor:pointer}.film-text{padding:20px}.film-text p{color:#dce6df;margin-bottom:0}.film-side{display:grid;gap:18px}.film-mini{display:flex;gap:17px;background:#f5efe4;border-radius:16px;overflow:hidden;align-items:stretch}.film-mini img{width:38%;min-height:145px;object-fit:cover}.film-mini div{padding:16px 16px 16px 0}.film-mini h3{margin:0;color:var(--green)}.film-mini p{margin:7px 0;color:var(--muted);font-size:.9rem}
+    .contact-section{background:#183f32;color:white}.contact-section .section-title{color:white}.contact-section .section-intro{color:#d3e0d8}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px}.contact-list{display:grid;gap:19px;margin-top:26px}.contact-item{display:flex;gap:13px}.contact-icon{width:43px;height:43px;border-radius:12px;background:#ffffff16;display:grid;place-items:center;font-size:1.25rem;flex-shrink:0}.contact-item strong{display:block}.contact-item span{color:#d3e0d8;font-size:.94rem}.contact-form{background:white;color:var(--ink);border-radius:18px;padding:25px;box-shadow:var(--shadow)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:6px;margin-bottom:14px}.field label{font-weight:700;font-size:.9rem;color:var(--green)}.field input,.field textarea,.field select{width:100%;padding:12px 13px;border:1px solid #d6dbd5;border-radius:9px;background:#fff;outline:none}.field input:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px #2458441a}.field textarea{min-height:115px;resize:vertical}.form-note{font-size:.82rem;color:var(--muted);margin:12px 0 0}
+    footer{background:#10291f;color:#d9e1dc;padding:25px 0}.footer-inner{display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap}.footer-inner p{margin:0;font-size:.9rem}.footer-links{display:flex;gap:15px;font-size:.9rem}.footer-links a:hover{color:var(--gold)}
+    .login-screen{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;background:var(--cream)}.login-art{color:white;display:flex;align-items:end;padding:clamp(25px,6vw,80px);background:linear-gradient(0deg,#10291feF,#10291f35),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1300&q=85') center/cover}.login-art h1{font-size:clamp(2.6rem,5vw,4.5rem);line-height:1.05;margin:12px 0}.login-art p{max-width:480px;color:#e9eee9}.login-panel{display:flex;align-items:center;justify-content:center;padding:28px}.login-box{width:min(410px,100%)}.login-box .brand{color:var(--green);margin-bottom:35px}.login-box h2{font-size:2rem;color:var(--green);margin:0 0 5px}.login-box>p{color:var(--muted);margin:0 0 26px}.login-box .field{margin-bottom:17px}.login-box .btn{width:100%;margin-top:5px}.login-message{font-size:.9rem;color:#9b3d2d;margin-top:12px;min-height:20px}.demo-note{background:#f0e8d8;padding:12px;border-radius:9px;color:#5d5a4f;font-size:.82rem;margin-top:18px}.cart-fab{position:fixed;bottom:20px;right:20px;z-index:15;background:var(--gold);color:var(--green);border:0;border-radius:30px;padding:13px 18px;font-weight:900;box-shadow:0 8px 25px #0003;cursor:pointer}.toast{position:fixed;bottom:80px;right:20px;z-index:30;background:#10291f;color:white;padding:13px 17px;border-radius:10px;box-shadow:var(--shadow);max-width:min(360px,calc(100% - 40px))}
+    dialog{border:0;border-radius:18px;padding:0;max-width:520px;width:calc(100% - 30px);box-shadow:0 20px 70px #0005}dialog::backdrop{background:#07160fc9}.modal-inner{padding:24px}.modal-inner h2{color:var(--green);margin-top:0}.cart-line{display:flex;justify-content:space-between;gap:15px;padding:12px 0;border-bottom:1px solid #e6e6e0}.cart-total{display:flex;justify-content:space-between;font-size:1.15rem;font-weight:900;margin:18px 0}.modal-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:end}
+    @media(max-width:850px){.nav-wrap{flex-wrap:wrap}.menu-toggle{display:block}.nav-links{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;padding:7px 0 10px}.nav-links.open{display:flex}.nav-links a,.nav-links button{text-align:left;padding:12px}.hero{min-height:560px}.feature-grid{grid-template-columns:1fr}.about-grid,.contact-grid,.films-grid{grid-template-columns:1fr}.about-image{min-height:340px}.product-grid{grid-template-columns:repeat(2,1fr)}.login-screen{grid-template-columns:1fr}.login-art{min-height:260px;align-items:center}.login-panel{padding:40px 24px}.login-box .brand{margin-bottom:24px}}
+    @media(max-width:560px){.brand{font-size:1rem}.brand-mark{width:36px;height:36px}.hero{min-height:540px}.hero-content{padding:60px 0}.hero h1{font-size:2.8rem}.section{padding:55px 0}.product-grid{grid-template-columns:1fr}.product-card img{height:230px}.form-row{grid-template-columns:1fr;gap:0}.film-mini{display:block}.film-mini img{width:100%;height:150px;display:block}.film-mini div{padding:15px}.footer-inner{align-items:flex-start;flex-direction:column}.contact-form{padding:18px}}
+  </style>
+</head>
+<body>
+  <section id="loginScreen" class="login-screen">
+    <div class="login-art">
+      <div><div class="eyebrow">Good food. Good company.</div><h1>Welcome to<br>Savory Haven.</h1><p>A neighborhood restaurant for fresh flavors, heartfelt hospitality, and moments worth sharing.</p></div>
+    </div>
+    <div class="login-panel">
+      <form id="loginForm" class="login-box">
+        <div class="brand"><span class="brand-mark">♨</span><span>SAVORY HAVEN</span></div>
+        <h2>Welcome back</h2><p>Sign in to explore our menu and restaurant.</p>
+        <div class="field"><label for="loginUser">Username or email</label><input id="loginUser" name="username" autocomplete="username" placeholder="Enter your username" required></div>
+        <div class="field"><label for="loginPass">Password</label><input id="loginPass" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required></div>
+        <button class="btn btn-dark" type="submit">Sign In <span>→</span></button>
+        <div id="loginMessage" class="login-message" aria-live="polite"></div>
+        <div class="demo-note"><strong>Demo login:</strong> Username <code>guest</code> · Password <code>food123</code><br>This front-end demo is not secure authentication. See publishing note below.</div>
+      </form>
+    </div>
+  </section>
+
+  <div id="site" class="hidden">
+    <header class="topbar">
+      <div class="nav-wrap">
+        <a class="brand" href="#home" aria-label="Savory Haven home"><span class="brand-mark">♨</span><span>SAVORY HAVEN</span></a>
+        <button id="menuToggle" class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <nav id="navLinks" class="nav-links" aria-label="Main navigation">
+          <a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#films">Films</a><a href="#contact">Contact</a>
+          <button id="logoutBtn" type="button">Logout ↗</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <div class="eyebrow">Made fresh. Served with heart.</div>
+          <h1>Gather around<br>something delicious.</h1>
+          <p>From comforting classics to fresh favorites, discover a welcoming place where every meal feels special.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#products">Explore Our Menu ↗</a><a class="btn btn-outline" href="#contact">Contact Us</a></div>
+          <div class="hero-note"><span>✦ Freshly prepared</span><span>✦ Warm hospitality</span><span>✦ Made for sharing</span></div>
+        </div>
+      </section>
+
+      <div class="feature-strip"><div class="container feature-grid">
+        <div class="feature"><div class="feature-icon">🥬</div><div><strong>Fresh ingredients</strong><small>Quality ingredients, thoughtfully prepared.</small></div></div>
+        <div class="feature"><div class="feature-icon">🍳</div><div><strong>Made to order</strong><small>Food prepared with care for every guest.</small></div></div>
+        <div class="feature"><div class="feature-icon">🤎</div><div><strong>A place to gather</strong><small>Good food is better together.</small></div></div>
+      </div></div>
+
+      <section id="about" class="section"><div class="container about-grid">
+        <div class="about-image" role="img" aria-label="Warm and inviting restaurant interior"><div class="image-tag">A little taste of home</div></div>
+        <div class="about-copy"><div class="eyebrow">Our story</div><h2 class="section-title">Good meals bring people together.</h2><p>Savory Haven Restaurant was created around a simple idea: delicious food, friendly service, and a comfortable place for people to connect. Whether you're sharing a family meal, catching up with friends, or enjoying a quiet lunch, you're welcome at our table.</p><p>We focus on satisfying favorites, fresh preparation, and hospitality that makes every visit feel personal.</p><ul class="check-list"><li>Comforting meals and fresh favorites</li><li>Friendly service in a relaxed setting</li><li>Options for lunch, dinner, and sharing</li></ul><a href="#products" class="btn btn-dark">See What's Cooking</a></div>
+      </div></section>
+
+      <section id="products" class="section menu-section"><div class="container">
+        <div class="menu-head"><div><div class="eyebrow">From our kitchen</div><h2 class="section-title">Customer favorites</h2><p class="section-intro">Explore our sample menu. Prices are displayed in Philippine pesos (₱). Items and prices can be edited to match your real restaurant.</p></div></div>
+        <div class="filters" aria-label="Filter menu"><button class="filter-btn active" data-filter="All">All Items</button><button class="filter-btn" data-filter="Meals">Meals</button><button class="filter-btn" data-filter="Pasta">Pasta</button><button class="filter-btn" data-filter="Drinks">Drinks</button><button class="filter-btn" data-filter="Desserts">Desserts</button></div>
+        <div id="productGrid" class="product-grid">
+          <article class="product-card" data-category="Meals"><img loading="lazy" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80" alt="Grilled chicken with rice"><div class="product-info"><div class="product-top"><h3>Grilled Chicken Plate</h3><span class="price">₱249</span></div><p>Juicy grilled chicken served with rice and seasonal vegetables.</p><div class="product-actions"><span class="tag">BESTSELLER</span><button class="btn btn-dark btn-small add-cart" data-name="Grilled Chicken Plate" data-price="249">Add to Cart +</button></div></div></article>
+          <article class="product-card" data-category="Meals"><img loading="lazy" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80" alt="Freshly baked pizza"><div class="product-info"><div class="product-top"><h3>Haven Supreme Pizza</h3><span class="price">₱329</span></div><p>Golden crust topped with cheese, vegetables, and savory toppings.</p><div class="product-actions"><span class="tag">FOR SHARING</span><button class="btn btn-dark btn-small add-cart" data-name="Haven Supreme Pizza" data-price="329">Add to Cart +</button></div></div></article>
+          <article class="product-card" data-category="Pasta"><img loading="lazy" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80" alt="Creamy pasta dish" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80' ><div class="product-info"><div class="product-top"><h3>Creamy Garlic Pasta</h3><span class="price">₱219</span></div><p>Silky garlic cream sauce with herbs and a sprinkle of cheese.</p><div class="product-actions"><span class="tag">HOUSE FAVORITE</span><button class="btn btn-dark btn-small add-cart" data-name="Creamy Garlic Pasta" data-price="219">Add to Cart +</button></div></div></article>
+          <article class="product-card" data-category="Meals"><img loading="lazy" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Classic cheeseburger"><div class="product-info"><div class="product-top"><h3>Haven Cheeseburger</h3><span class="price">₱199</span></div><p>A juicy burger with melted cheese, crisp lettuce, and house sauce.</p><div class="product-actions"><span class="tag">CLASSIC</span><button class="btn btn-dark btn-small add-cart" data-name="Haven Cheeseburger" data-price="199">Add to Cart +</button></div></div></article>
+          <article class="product-card" data-category="Drinks"><img loading="lazy" src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80" alt="Iced fruit drink"><div class="product-info"><div class="product-top"><h3>Fresh Citrus Cooler</h3><span class="price">₱89</span></div><p>A refreshing citrus drink served chilled over ice.</p><div class="product-actions"><span class="tag">REFRESHING</span><button class="btn btn-dark btn-small add-cart" data-name="Fresh Citrus Cooler" data-price="89">Add to Cart +</button></div></div></article>
+          <article class="product-card" data-category="Desserts"><img loading="lazy" src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=80" alt="Ice cream dessert"><div class="product-info"><div class="product-top"><h3>Vanilla Sundae</h3><span class="price">₱99</span></div><p>Creamy vanilla ice cream finished with a sweet topping.</p><div class="product-actions"><span class="tag">SWEET FINISH</span><button class="btn btn-dark btn-small add-cart" data-name="Vanilla Sundae" data-price="99">Add to Cart +</button></div></div></article>
+        </div>
+      </div></section>
+
+      <section id="films" class="section"><div class="container">
+        <div class="eyebrow">See the experience</div><h2 class="section-title">A taste of Savory Haven</h2><p class="section-intro">Use this space for restaurant films, kitchen videos, food reels, or event highlights. Replace the demo links with your own videos before publishing.</p>
+        <div class="films-grid">
+          <article class="film-card"><div class="film-preview"><button class="play-button" data-video="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4" aria-label="Play restaurant story video">▶</button></div><div class="film-text"><div class="eyebrow">Featured film</div><h3>Inside Our Restaurant</h3><p>A video section to introduce your atmosphere, food, and people.</p></div></article>
+          <div class="film-side">
+            <article class="film-mini"><img loading="lazy" src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=500&q=80" alt="Chef preparing food"><div><h3>From Kitchen to Table</h3><p>Show how your team prepares each meal with care.</p><button class="btn btn-dark btn-small" data-video="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4">Watch film ▶</button></div></article>
+            <article class="film-mini"><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Restaurant dining room"><div><h3>Moments Around the Table</h3><p>Share celebrations, events, and guest experiences.</p><button class="btn btn-dark btn-small" data-video="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4">Watch film ▶</button></div></article>
+          </div>
+        </div>
+      </div></section>
+
+      <section id="contact" class="section contact-section"><div class="container">
+        <div class="eyebrow">We'd love to hear from you</div><h2 class="section-title">Let's keep in touch.</h2><p class="section-intro">Ask about our menu, group dining, or upcoming events. Update the sample details below with your real restaurant contact information.</p>
+        <div class="contact-grid"><div><div class="contact-list">
+          <div class="contact-item"><div class="contact-icon">📍</div><div><strong>Visit us</strong><span>Your street address, City, Philippines</span></div></div>
+          <div class="contact-item"><div class="contact-icon">☎</div><div><strong>Call us</strong><span>+63 900 000 0000 (replace with your number)</span></div></div>
+          <div class="contact-item"><div class="contact-icon">✉</div><div><strong>Email</strong><span>hello@savoryhaven.example (demo address)</span></div></div>
+          <div class="contact-item"><div class="contact-icon">◷</div><div><strong>Opening hours</strong><span>Daily · 10:00 AM – 9:00 PM (sample hours)</span></div></div>
+        </div></div>
+        <form id="contactForm" class="contact-form">
+          <div class="form-row"><div class="field"><label for="contactName">Your name</label><input id="contactName" required placeholder="Full name"></div><div class="field"><label for="contactEmail">Email address</label><input id="contactEmail" type="email" required placeholder="you@example.com"></div></div>
+          <div class="field"><label for="contactSubject">What is this about?</label><select id="contactSubject"><option>General inquiry</option><option>Menu question</option><option>Group dining</option><option>Feedback</option></select></div>
+          <div class="field"><label for="contactMessage">Message</label><textarea id="contactMessage" required placeholder="Write your message here..."></textarea></div>
+          <button class="btn btn-dark" type="submit">Prepare Message ↗</button><p class="form-note">Demo form: it opens your email app if configured. A real online form needs a backend or form service.</p>
+        </form></div>
+      </div></section>
+    </main>
+    <footer><div class="container footer-inner"><p>© <span id="year"></span> Savory Haven Restaurant. All rights reserved.</p><div class="footer-links"><a href="#home">Back to top ↑</a><a href="#products">Menu</a><a href="#contact">Contact</a></div></div></footer>
+    <button id="cartFab" class="cart-fab" type="button">🛒 Cart (<span id="cartCount">0</span>)</button>
+  </div>
+
+  <dialog id="cartDialog"><div class="modal-inner"><h2>Your order</h2><div id="cartItems"></div><div class="cart-total"><span>Total</span><span id="cartTotal">₱0</span></div><p class="form-note">This is a sample cart only. It does not send an order to the restaurant.</p><div class="modal-actions"><button id="clearCart" class="btn btn-outline" style="color:#183f32;border-color:#ccd3cc" type="button">Clear cart</button><button class="btn btn-dark" id="closeCart" type="button">Continue browsing</button></div></div></dialog>
+  <dialog id="videoDialog"><div class="modal-inner"><h2>Restaurant film</h2><div id="videoFrame"></div><p class="form-note">Replace this demo video with a video you own or have permission to use.</p><div class="modal-actions"><button id="closeVideo" class="btn btn-dark" type="button">Close video</button></div></div></dialog>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script>
+    // DEMO ONLY: this login is client-side and is not secure for real customer accounts.
+    const loginScreen = document.getElementById('loginScreen');
+    const site = document.getElementById('site');
+    const loginForm = document.getElementById('loginForm');
+    const loginMessage = document.getElementById('loginMessage');
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    function showToast(message) {
+      toast.textContent = message; toast.classList.remove('hidden');
+      clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.add('hidden'), 2800);
+    }
+    function enterSite() {
+      loginScreen.classList.add('hidden'); site.classList.remove('hidden');
+      window.scrollTo({top:0,behavior:'instant'});
+    }
+    function logout() {
+      site.classList.add('hidden'); loginScreen.classList.remove('hidden');
+      loginForm.reset(); loginMessage.textContent = '';
+      document.getElementById('navLinks').classList.remove('open');
+      window.scrollTo({top:0,behavior:'instant'});
+    }
+    loginForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const username = document.getElementById('loginUser').value.trim();
+      const password = document.getElementById('loginPass').value;
+      if ((username.toLowerCase() === 'guest' || username.toLowerCase() === 'guest@example.com') && password === 'food123') {
+        enterSite();
+      } else {
+        loginMessage.textContent = 'Incorrect demo login. Try username guest and password food123.';
+      }
+    });
+    document.getElementById('logoutBtn').addEventListener('click', logout);
+    document.getElementById('menuToggle').addEventListener('click', () => {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('open');
+      document.getElementById('menuToggle').setAttribute('aria-expanded', nav.classList.contains('open'));
+    });
+    document.querySelectorAll('#navLinks a').forEach(link => link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')));
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('.filter-btn').forEach(button => button.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
+      const category = button.dataset.filter;
+      document.querySelectorAll('.product-card').forEach(card => {
+        card.classList.toggle('hidden', category !== 'All' && card.dataset.category !== category);
+      });
+    }));
+
+    const cart = [];
+    function money(amount) { return '₱' + Number(amount).toLocaleString('en-PH'); }
+    function updateCart() {
+      document.getElementById('cartCount').textContent = cart.reduce((sum,item)=>sum+item.qty,0);
+      const items = document.getElementById('cartItems');
+      items.innerHTML = '';
+      if (!cart.length) { items.innerHTML = '<p>Your cart is empty. Add a menu item to get started.</p>'; }
+      cart.forEach((item,index) => {
+        const row = document.createElement('div'); row.className = 'cart-line';
+        const label = document.createElement('span'); label.textContent = `${item.name} × ${item.qty}`;
+        const right = document.createElement('span'); right.textContent = money(item.price * item.qty);
+        row.append(label,right); items.appendChild(row);
+      });
+      document.getElementById('cartTotal').textContent = money(cart.reduce((sum,item)=>sum+item.price*item.qty,0));
+    }
+    document.querySelectorAll('.add-cart').forEach(button => button.addEventListener('click', () => {
+      const name = button.dataset.name, price = Number(button.dataset.price);
+      const existing = cart.find(item => item.name === name);
+      if (existing) existing.qty++; else cart.push({name,price,qty:1});
+      updateCart(); showToast(name + ' added to your cart.');
+    }));
+    const cartDialog = document.getElementById('cartDialog');
+    document.getElementById('cartFab').addEventListener('click', () => {updateCart();cartDialog.showModal();});
+    document.getElementById('closeCart').addEventListener('click', () => cartDialog.close());
+    document.getElementById('clearCart').addEventListener('click', () => {cart.length=0;updateCart();showToast('Cart cleared.');});
+
+    const videoDialog = document.getElementById('videoDialog');
+    document.querySelectorAll('[data-video]').forEach(button => button.addEventListener('click', () => {
+      const frame = document.getElementById('videoFrame');
+      frame.innerHTML = '';
+      const iframe = document.createElement('iframe');
+      iframe.src = button.dataset.video;
+      iframe.title = 'Savory Haven restaurant film';
+      iframe.width = '100%'; iframe.height = '280'; iframe.style.border = '0'; iframe.style.borderRadius = '12px';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      frame.appendChild(iframe); videoDialog.showModal();
+    }));
+    function closeVideo() { document.getElementById('videoFrame').innerHTML=''; videoDialog.close(); }
+    document.getElementById('closeVideo').addEventListener('click', closeVideo);
+    videoDialog.addEventListener('close', () => document.getElementById('videoFrame').innerHTML='');
+
+    document.getElementById('contactForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const subject = document.getElementById('contactSubject').value;
+      const message = document.getElementById('contactMessage').value.trim();
+      const recipient = 'hello@savoryhaven.example'; // Replace with your real restaurant email.
+      const body = `Name: ${name}\nEmail: ${email}\nTopic: ${subject}\n\n${message}`;
+      window.location.href = `mailto:${recipient}?subject=${encodeURIComponent('Savory Haven: '+subject)}&body=${encodeURIComponent(body)}`;
+      showToast('Opening your email app. If nothing opens, connect a mail app and try again.');
+    });
+    updateCart();
+  </script>
+</body>
+</html>
